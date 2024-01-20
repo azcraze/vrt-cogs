@@ -60,7 +60,7 @@ class Fluent(commands.Cog):
         translator = TranslateManager(deepl_key=deepl_key.get("key"))
         return await translator.translate(msg, dest, force=force)
 
-    @commands.hybrid_command(name="translate")
+    @commands.hybrid_command(name="translator")
     @app_commands.describe(to_language="Translate to this language")
     @commands.bot_has_permissions(embed_links=True)
     async def translate_command(self, ctx: commands.Context, to_language: str, *, message: t.Optional[str] = None):
